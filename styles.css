@@ -95,12 +95,30 @@ body {
     width: 85%;
   }
 }
-.list-invisible {
-  position: absolute;
-  width: 150px;
-  height: 38px;
-  opacity: 0;
-  z-index: 1;
+.list-invisible:hover::before {
+  background-color: rgb(33, 218, 126);
+}
+.list-invisible::before {
+  content: "Добавить задачу";
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--bs-tertiary-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@media (width < 550px) {
+  .list-invisible::before {
+    content: "+";
+  }
 }
 .list-task-box {
   display: block;
@@ -143,31 +161,6 @@ body {
 
 .input-group {
   margin-bottom: 10px;
-}
-.input-group:hover::before {
-  background-color: rgb(33, 218, 126);
-}
-.input-group::before {
-  content: "Добавить задачу";
-  display: flex;
-  align-items: center;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--bs-body-color);
-  text-align: center;
-  white-space: nowrap;
-  background-color: var(--bs-tertiary-bg);
-  border: var(--bs-border-width) solid var(--bs-border-color);
-  border-radius: var(--bs-border-radius);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-@media (width < 550px) {
-  .input-group::before {
-    content: "+";
-  }
 }
 
 .list-group-item {
