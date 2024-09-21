@@ -11,7 +11,7 @@ export async function getCity(longitude, latitude) {
     localStorage.setItem(
       "city",
       await data.response.GeoObjectCollection.featureMember[0].GeoObject
-        .description.metaDataProperty.GeocoderMetaData.Address.Components[4]
+        .metaDataProperty.GeocoderMetaData.Address.Components[4]
         .name
     );
     // return data.response.GeoObjectCollection.featureMember[0].GeoObject
