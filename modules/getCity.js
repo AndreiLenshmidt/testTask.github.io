@@ -1,5 +1,3 @@
-const GEOKODE_API_KEY = "fd5f19aa-3d44-4472-bfb8-f44388eac582";
-
 export async function getCity(longitude, latitude) {
   try {
     const response = await fetch(
